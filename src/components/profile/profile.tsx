@@ -9,155 +9,155 @@ import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export const Profile = () => {
-	const formatDate = (date: Date | null): string => {
-		if (!date) return "Present";
-		return date.toLocaleDateString("en-US", { year: "numeric", month: "short" });
-	};
+  const formatDate = (date: Date | null): string => {
+    if (!date) return "Present";
+    return date.toLocaleDateString("en-US", { year: "numeric", month: "short" });
+  };
 
-	return (
-		<div className="font-quicksand p-6 pt-0 space-y-6">
-			{/* Who am I */}
-			<div className="text-center space-y-1">
-				<h1 className="text-3xl font-extrabold">Koki Hokao</h1>
-				<p className="text-lg text-neutral-500 dark:text-neutral-400">Software Engineer</p>
-			</div>
+  return (
+    <div className="font-quicksand p-6 pt-0 space-y-6">
+      {/* Who am I */}
+      <div className="text-center space-y-1">
+        <h1 className="text-3xl font-extrabold">Koki Hokao</h1>
+        <p className="text-lg text-neutral-500 dark:text-neutral-400">Software Engineer</p>
+      </div>
 
-			<Separator />
+      <Separator />
 
-			{/* Experience */}
-			<section className="px-1">
-				<h2 className="text-xl font-bold pb-2">Experience</h2>
+      {/* Experience */}
+      <section className="px-1">
+        <h2 className="text-xl font-bold pb-2">Experience</h2>
 
-				{experienceItems.map((item: ExperienceItem, index: number) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
-					<div key={index} className="p-2">
-						<h3 className="text-base font-semibold">{item.title}</h3>
-						<div className="p-1 space-y-1">
-							<p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
-								{formatDate(item.from)} - {formatDate(item.to)} ・ {item.employmentType}
-							</p>
-							<p className="text-base">{item.description}</p>
-						</div>
-					</div>
-				))}
-			</section>
+        {experienceItems.map((item: ExperienceItem, index: number) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
+          <div key={index} className="p-2">
+            <h3 className="text-base font-semibold">{item.title}</h3>
+            <div className="p-1 space-y-1">
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+                {formatDate(item.from)} - {formatDate(item.to)} ・ {item.employmentType}
+              </p>
+              <p className="text-base">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </section>
 
-			<Separator />
+      <Separator />
 
-			{/* Education */}
-			<section className="px-1">
-				<h2 className="text-xl font-bold pb-2">Education</h2>
+      {/* Education */}
+      <section className="px-1">
+        <h2 className="text-xl font-bold pb-2">Education</h2>
 
-				{educationItems.map((item: EducationItem, index: number) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
-					<div key={index} className="p-2">
-						<h3 className="text-base font-semibold">{item.title}</h3>
-						<div className="p-1 space-y-1">
-							<p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
-								{formatDate(item.from)} - {formatDate(item.to)}
-							</p>
-							<p className="text-base">{item.description}</p>
-						</div>
-					</div>
-				))}
-			</section>
+        {educationItems.map((item: EducationItem, index: number) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
+          <div key={index} className="p-2">
+            <h3 className="text-base font-semibold">{item.title}</h3>
+            <div className="p-1 space-y-1">
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+                {formatDate(item.from)} - {formatDate(item.to)}
+              </p>
+              <p className="text-base">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </section>
 
-			<Separator />
+      <Separator />
 
-			{/* Publication */}
-			<section className="px-1">
-				<h2 className="text-xl font-bold pb-2">Publication</h2>
+      {/* Publication */}
+      <section className="px-1">
+        <h2 className="text-xl font-bold pb-2">Publication</h2>
 
-				{publicationItems.map((item: PublicationItem, index: number) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
-					<div key={index} className="p-2">
-						<h3 className="text-base font-semibold">
-							{item.url ? (
-								<a href={item.url} target="_blank" rel="noreferrer" className="underline hover:opacity-80">
-									{item.title}
-								</a>
-							) : (
-								<span>{item.title}</span>
-							)}
-						</h3>
-						<div className="p-1 space-y-1">
-							<p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
-							<p className="text-base">{item.description}</p>
-						</div>
-					</div>
-				))}
-			</section>
+        {publicationItems.map((item: PublicationItem, index: number) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
+          <div key={index} className="p-2">
+            <h3 className="text-base font-semibold">
+              {item.url ? (
+                <a href={item.url} target="_blank" rel="noreferrer" className="underline hover:opacity-80">
+                  {item.title}
+                </a>
+              ) : (
+                <span>{item.title}</span>
+              )}
+            </h3>
+            <div className="p-1 space-y-1">
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
+              <p className="text-base">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </section>
 
-			<Separator />
+      <Separator />
 
-			{/* Portfolio */}
-			<section className="px-1">
-				<h2 className="text-xl font-bold pb-2">Portfolio</h2>
+      {/* Portfolio */}
+      <section className="px-1">
+        <h2 className="text-xl font-bold pb-2">Portfolio</h2>
 
-				{portfolioItems.map((item: PortfolioItem, index: number) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
-					<div key={index} className="p-2">
-						<h3 className="text-base font-semibold">
-							{item.url ? (
-								<a href={item.url} target="_blank" rel="noreferrer" className="underline hover:opacity-80">
-									{item.title}
-								</a>
-							) : (
-								<span>{item.title}</span>
-							)}
-						</h3>
-						<div className="p-1 space-y-1">
-							<p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
-							<p className="text-base">{item.description}</p>
-						</div>
-					</div>
-				))}
-			</section>
+        {portfolioItems.map((item: PortfolioItem, index: number) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
+          <div key={index} className="p-2">
+            <h3 className="text-base font-semibold">
+              {item.url ? (
+                <a href={item.url} target="_blank" rel="noreferrer" className="underline hover:opacity-80">
+                  {item.title}
+                </a>
+              ) : (
+                <span>{item.title}</span>
+              )}
+            </h3>
+            <div className="p-1 space-y-1">
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
+              <p className="text-base">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </section>
 
-			<Separator />
+      <Separator />
 
-			{/* Certification */}
-			<section className="px-1">
-				<h2 className="text-xl font-bold pb-2">Certification</h2>
+      {/* Certification */}
+      <section className="px-1">
+        <h2 className="text-xl font-bold pb-2">Certification</h2>
 
-				{certificationItems.map((item: CertificationItem, index: number) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
-					<div key={index} className="p-2">
-						<div className="flex flex-row items-center space-x-4">
-							<h3 className="text-base font-semibold">{item.title}</h3>
-							<p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
-						</div>
-					</div>
-				))}
-			</section>
+        {certificationItems.map((item: CertificationItem, index: number) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
+          <div key={index} className="p-2">
+            <div className="flex flex-row items-center space-x-4">
+              <h3 className="text-base font-semibold">{item.title}</h3>
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
+            </div>
+          </div>
+        ))}
+      </section>
 
-			<Separator />
+      <Separator />
 
-			{/* Social */}
-			<TooltipProvider>
-				<div className="flex flex-row justify-start space-x-2 px-1">
-					{socialItems.map((item: SocialItem, index: number) => (
-						// biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
-						<Tooltip key={index}>
-							<TooltipTrigger asChild>
-								<a href={item.url} target="_blank" rel="noreferrer">
-									<Button
-										variant="ghost"
-										size="icon"
-										className="h-12 w-12 [&_svg:not([class*='size-'])]:size-8 cursor-pointer"
-									>
-										{item.icon()}
-									</Button>
-								</a>
-							</TooltipTrigger>
-							{/* `fill-primary` style is fixed, so override it */}
-							<TooltipContent className="[&_svg]:fill-neutral-900 dark:[&_svg]:fill-neutral-50">
-								<p>{item.tooltip}</p>
-							</TooltipContent>
-						</Tooltip>
-					))}
-				</div>
-			</TooltipProvider>
-		</div>
-	);
+      {/* Social */}
+      <TooltipProvider>
+        <div className="flex flex-row justify-start space-x-2 px-1">
+          {socialItems.map((item: SocialItem, index: number) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
+            <Tooltip key={index}>
+              <TooltipTrigger asChild>
+                <a href={item.url} target="_blank" rel="noreferrer">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-12 w-12 [&_svg:not([class*='size-'])]:size-8 cursor-pointer"
+                  >
+                    {item.icon()}
+                  </Button>
+                </a>
+              </TooltipTrigger>
+              {/* `fill-primary` style is fixed, so override it */}
+              <TooltipContent className="[&_svg]:fill-neutral-900 dark:[&_svg]:fill-neutral-50">
+                <p>{item.tooltip}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </div>
+      </TooltipProvider>
+    </div>
+  );
 };
