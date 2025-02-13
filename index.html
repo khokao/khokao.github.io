@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Preconnect and load Quicksand to reduce FOUT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" fetchpriority="high" href="//fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" media="print" onload='this.media="all"' />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koki Hokao</title>
+
+    <!-- Load the saved theme before rendering to avoid the flash of light theme -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem("vite-ui-theme") || "light";
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-3860CF4_.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BTXFNcTT.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
