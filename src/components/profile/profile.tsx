@@ -19,7 +19,9 @@ export const Profile = () => {
       {/* Who am I */}
       <div className="text-center space-y-1">
         <h1 className="text-3xl font-extrabold">Koki Hokao</h1>
-        <p className="text-lg text-neutral-500 dark:text-neutral-400">Software Engineer</p>
+        <p className="text-lg text-neutral-500 dark:text-neutral-400 transition-colors duration-500">
+          Software Engineer
+        </p>
       </div>
 
       <Separator />
@@ -33,7 +35,7 @@ export const Profile = () => {
           <div key={index} className="p-2">
             <h3 className="text-base font-semibold">{item.title}</h3>
             <div className="p-1 space-y-1">
-              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400 transition-colors duration-500">
                 {formatDate(item.from)} - {formatDate(item.to)} ・ {item.employmentType}
               </p>
               <p className="text-base">{item.description}</p>
@@ -53,7 +55,7 @@ export const Profile = () => {
           <div key={index} className="p-2">
             <h3 className="text-base font-semibold">{item.title}</h3>
             <div className="p-1 space-y-1">
-              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400 transition-colors duration-500">
                 {formatDate(item.from)} - {formatDate(item.to)}
               </p>
               <p className="text-base">{item.description}</p>
@@ -81,7 +83,9 @@ export const Profile = () => {
               )}
             </h3>
             <div className="p-1 space-y-1">
-              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400 transition-colors duration-500">
+                {formatDate(item.date)}
+              </p>
               <p className="text-base">{item.description}</p>
             </div>
           </div>
@@ -107,7 +111,9 @@ export const Profile = () => {
               )}
             </h3>
             <div className="p-1 space-y-1">
-              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400 transition-colors duration-500">
+                {formatDate(item.date)}
+              </p>
               <p className="text-base">{item.description}</p>
             </div>
           </div>
@@ -125,7 +131,9 @@ export const Profile = () => {
           <div key={index} className="p-2">
             <div className="flex flex-row items-center space-x-4">
               <h3 className="text-base font-semibold">{item.title}</h3>
-              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{formatDate(item.date)}</p>
+              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400 transition-colors duration-500">
+                {formatDate(item.date)}
+              </p>
             </div>
           </div>
         ))}
