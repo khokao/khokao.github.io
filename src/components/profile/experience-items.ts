@@ -8,6 +8,13 @@ export interface ExperienceItem {
 
 export const experienceItems: ExperienceItem[] = [
   {
+    title: "KK Generation, Inc.",
+    from: new Date("2025-02-17"),
+    to: null,
+    employmentType: "Contract",
+    description: "Software Engineer.",
+  },
+  {
     title: "Preferred Networks, Inc.",
     from: new Date("2024-07-10"),
     to: new Date("2024-12-25"),
