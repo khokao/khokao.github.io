@@ -9,7 +9,7 @@ export const educationItems: EducationItem[] = [
   {
     title: "Waseda Univ.",
     from: new Date("2023-04-01"),
-    to: null,
+    to: new Date("2025-03-31"),
     description: "MEng, Electrical Engineering and Bioscience",
   },
   {
