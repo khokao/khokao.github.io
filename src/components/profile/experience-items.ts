@@ -24,7 +24,7 @@ export const experienceItems: ExperienceItem[] = [
   {
     title: "IPA: Information-technology Promotion Agency, Japan",
     from: new Date("2024-06-24"),
-    to: null, // '2025-03-07'
+    to: new Date("2025-03-07"),
     employmentType: "Contract",
     description: "MITOU Creator. Created Synergetica, a desktop app for gene circuit design.",
   },
