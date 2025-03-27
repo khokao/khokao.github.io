@@ -8,6 +8,13 @@ export interface ExperienceItem {
 
 export const experienceItems: ExperienceItem[] = [
   {
+    title: "Mercari, Inc.",
+    from: new Date("2025-04-01"),
+    to: null,
+    employmentType: "Permanent",
+    description: "Software Engineer.",
+  },
+  {
     title: "KK Generation, Inc.",
     from: new Date("2025-02-17"),
     to: null,
@@ -29,7 +36,7 @@ export const experienceItems: ExperienceItem[] = [
     description: "MITOU Creator. Created Synergetica, a desktop app for gene circuit design.",
   },
   {
-    title: "Merpay, Inc.",
+    title: "Mercari, Inc.",
     from: new Date("2023-09-01"),
     to: new Date("2023-11-30"),
     employmentType: "Internship",
