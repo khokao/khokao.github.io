@@ -130,7 +130,15 @@ export const Profile = () => {
           // biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
           <div key={index} className="p-2">
             <div className="flex flex-row items-center space-x-4">
-              <h3 className="text-base font-semibold">{item.title}</h3>
+              <h3 className="text-base font-semibold">
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noreferrer" className="underline hover:opacity-80">
+                    {item.title}
+                  </a>
+                ) : (
+                  <span>{item.title}</span>
+                )}
+              </h3>
               <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400 transition-colors duration-500">
                 {formatDate(item.date)}
               </p>
