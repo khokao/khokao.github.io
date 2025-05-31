@@ -19,7 +19,7 @@ export const experienceItems: ExperienceItem[] = [
     from: new Date("2025-02-17"),
     to: null,
     employmentType: "Contract",
-    description: "Software Engineer.",
+    description: "Software Engineer (Frontend, Backend, Infrastructure, DevOps).",
   },
   {
     title: "Preferred Networks, Inc.",
