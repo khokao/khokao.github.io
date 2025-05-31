@@ -1,6 +1,8 @@
 import { type CertificationItem, certificationItems } from "@/components/profile/certification-items";
 import { type EducationItem, educationItems } from "@/components/profile/education-items";
 import { type ExperienceItem, experienceItems } from "@/components/profile/experience-items";
+import { type HonorsAwardsItem, honorsAwardsItems } from "@/components/profile/honors-awards-items";
+import { philosophyItems } from "@/components/profile/philosophy-items";
 import { type PortfolioItem, portfolioItems } from "@/components/profile/portfolio-items";
 import { type PublicationItem, publicationItems } from "@/components/profile/publication-items";
 import { type SocialItem, socialItems } from "@/components/profile/social-items";
@@ -23,6 +25,25 @@ export const Profile = () => {
           Software Engineer
         </p>
       </div>
+
+      <Separator />
+
+      {/* Philosophy */}
+      <section className="px-1">
+        <h2 className="text-xl font-bold pb-2">Philosophy</h2>
+
+        <div className="p-2">
+          <ul className="space-y-2">
+            {philosophyItems.map((item: string, index: number) => (
+              // biome-ignore lint/suspicious/noArrayIndexKey: array is static and not reordered
+              <li key={index} className="text-base flex items-start">
+                <span className="mr-2">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <Separator />
 
