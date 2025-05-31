@@ -10,9 +10,4 @@ export const certificationItems: CertificationItem[] = [
     date: new Date("2021-04-01"),
     url: null,
   },
-  {
-    title: "MITOU Super Creator",
-    date: new Date("2025-05-29"),
-    url: "https://www.ipa.go.jp/jinzai/mitou/koubo/career/2024/2024-supercreator-04.html",
-  },
 ];
