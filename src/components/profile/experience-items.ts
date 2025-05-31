@@ -12,7 +12,7 @@ export const experienceItems: ExperienceItem[] = [
     from: new Date("2025-04-01"),
     to: null,
     employmentType: "Permanent",
-    description: "Software Engineer.",
+    description: "Software Engineer (Machine Learning, MLOps, Data Science).",
   },
   {
     title: "KK Generation, Inc.",
